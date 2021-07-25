@@ -7,7 +7,8 @@ import glob
 import sys
 from pathlib import Path
 
-filename = Path('_grib2netcdf-webmars-public-svc-green-005-6fe5cac1a363ec1525f54343b6cc9fd8-XM_YF6.nc')
+filename = Path(
+    '_grib2netcdf-webmars-public-svc-green-005-6fe5cac1a363ec1525f54343b6cc9fd8-XM_YF6.nc')
 # def to_csv(source_file):
 # nc data
 dataset = nc.Dataset(filename)
@@ -52,6 +53,7 @@ try:
                         (lat[j], lon[k], press[0][i][j][k],  eva[i]))
 
 
-print('Get'+file_name+'.csv Success!')
+
 
 targetFile.close()
+print('Get'+file_name+'.csv Success!')
