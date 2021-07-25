@@ -1,5 +1,5 @@
 # Importing libraries
-import pandas
+import pandas as pd
 import netCDF4 as nc
 import numpy as np
 import csv
@@ -51,8 +51,6 @@ try:
                     i = 0
                     writer.writerow(
                         (lat[j], lon[k], press[0][i][j][k],  eva[i]))
-
-
 
 
 targetFile.close()
