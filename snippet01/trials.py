@@ -30,5 +30,7 @@ print(eva)
 df_press = press.sel(longitude = np.arange(-25,50,0.5), latitude = np.arange(0,40,0.5), method='nearest')
 df_eva = eva.sel(longitude = np.arange(-25,50,0.5), latitude = np.arange(0,40,0.5), method='nearest')
 
-#Plotting different kinds of graphs 
+#Plotting different kinds of graphs for pressure 
 df_press[0,1,1].plot()
+# Doing same for Evaporation 
+df_eva[0].plot()
