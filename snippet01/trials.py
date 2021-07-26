@@ -28,5 +28,7 @@ eva = data['e']
 print(eva)
 
 df_press = press.sel(longitude = np.arange(-25,50,0.5), latitude = np.arange(0,40,0.5), method='nearest')
+df_eva = eva.sel(longitude = np.arange(-25,50,0.5), latitude = np.arange(0,40,0.5), method='nearest')
 
-df_press[1].plot()
+#Plotting different kinds of graphs 
+df_press[0,1,1].plot()
