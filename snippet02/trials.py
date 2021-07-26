@@ -16,7 +16,7 @@ from pathlib import Path
 import pymannkendall as pmk
 import xarray as xr
 import matplotlib.pyplot as plt 
-import matplotlib as 
+import matplotlib as cm
 
 
 filename = Path('pressure_evaporation_with_time_and_lon_lat.nc')
@@ -31,19 +31,19 @@ eva = data['e']
 NHA_press = press.sel(longitude = np.arange(-25,50,0.5), latitude = np.arange(0,40,0.5), method='nearest')
 NHA_eva = eva.sel(longitude = np.arange(-25,50,0.5), latitude = np.arange(0,40,0.5), method='nearest')
 
-'''
+
 # Doing same for Evaporation 
-df_eva[0].plot()
+NHA_eva[0].plot()
 plt.savefig('evaporation.jpeg')
 
+'''
 #Plotting different kinds of graphs for pressure 
-df_press[0,1,1].plot()
+NHA_press[0,1,1].plot()
 plt.savefig('pressure.jpeg')'''
 
 
-NHA_press.groupby('time.month').mean(dim=('time','longitude')).T.plot()
 
-
+#NHA_press.groupby('time.month').mean(dim=('time','longitude')).T.plot.contourf()
 
 
 
