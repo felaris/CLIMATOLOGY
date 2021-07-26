@@ -11,12 +11,12 @@ import pandas as pd
 import netCDF4 as nc
 import numpy as np
 import csv
-import glob
-import sys
+
 from pathlib import Path
 import pymannkendall as pmk
 import xarray as xr
 import matplotlib.pyplot as plt 
+import matplotlib as 
 
 
 filename = Path('pressure_evaporation_with_time_and_lon_lat.nc')
